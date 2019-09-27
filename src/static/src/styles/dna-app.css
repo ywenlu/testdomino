@@ -1,0 +1,316 @@
+#app
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-content: stretch;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: var(--blue-darker);
+}
+
+#app #content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+    padding: 0rem 0rem 0rem 0rem;
+}
+
+#app .article
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+    position: relative;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: var(--grey-lightest);
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    box-shadow: 0px 0px 3px 1px var(--black);
+    font-size: 12px;
+    perspective: 0;
+}
+
+#app .article hr
+{
+    width: 100%;
+}
+
+#app .article .article-header
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app .article .article-title
+{
+    font-family: "KPMG_Light";
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+#app .article .article-close
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+#app .article .article-close:hover
+{
+    background-color: var(--grey-light);
+}
+
+#app .article .article-body
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+    opacity: 0;
+}
+
+#app .article .article-popup
+{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0% 24% 0% 24%;
+    background-color: var(--blur);
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    z-index: 100;
+}
+
+#app .article .article-popup-container
+{
+    flex-grow: 1;
+    padding: 2rem 2rem 2rem 2rem;
+    background-color: var(--grey-lightest);
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+    box-shadow: 0px 0px 3px 1px var(--grey-dark);
+}
+
+#app .article .article-popup-container .article-popup-info
+{
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+#app .article .article-popup-container .article-popup-controls
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#app .article .article-popup-container .article-popup-tools
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: center;
+}
+
+#app .article .article-popup-container .article-popup-tools .article-popup-tool
+{
+    height: 44px;
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+#app .article .article-popup-container .article-popup-tools .article-popup-tool#select-competences
+{
+    width: 10rem;
+}
+
+#app .form-control
+{
+    font-size: 12px;
+}
+
+#app table.table
+{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+
+#app table.table tr th,
+#app table.table tr td
+{
+    padding: 0.25rem;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+}
+
+#app table.table tr th
+{
+    background-color: var(--grey-lighter);
+}
+
+#app table.table tr th.th-compact
+{
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+#app table.table tr td
+{
+    background-color: var(--white);
+}
+
+#app table.table tr td div.error
+{
+    padding: 0rem 1rem 0rem 1rem;
+    box-sizing: content-box;
+    background-color: var(--orange);
+    border-radius: 2rem;
+    color: var(--grey-lighter);
+    font-weight: bold;
+    text-align: center;
+}
+
+.popover-header
+{
+    background-color: rgb(246, 153, 63);
+    color: var(--grey-lighter);
+    font-weight: bold;
+    text-align: center;
+}
+
+#app table.table tr th.swp-td-left,
+#app table.table tr td.swp-td-left
+{
+    text-align: left
+}
+
+#app table.table tr th.swp-td-center,
+#app table.table tr td.swp-td-center
+{
+    text-align: center
+}
+
+#app table.table tr th.swp-td-right,
+#app table.table tr td.swp-td-right
+{
+    text-align: right
+}
+
+#app table.table tr td.swp-table-button
+{
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+#app table.table tr td.swp-table-button:hover
+{
+    background-color: var(--blue-light);
+    color: var(--grey-lighter);
+}
+
+#app table.table tr td.swp-table-button.swp-table-button-negative:hover
+{
+    background-color: var(--red-light);
+}
+
+#app table.table tr td .input-group.input-group-table .form-control,
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn
+{
+    padding: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn
+{
+    margin-left: -1px;
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
+    background-color: var(--blue-light);
+    border-color: var(--blue-light);
+    color: var(--white);
+    font-size: 10px;
+    transition: none;
+}
+
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn.btn-primary:hover
+{
+    background-color: var(--blue-dark);
+    border-color: var(--blue-dark);
+}
+
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn.disabled
+{
+    background-color: var(--grey-dark);
+    border-color: var(--grey-dark);
+}
+
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn.btn-primary
+
+#app table.table tr td .input-group.input-group-table .input-group-prepend button.btn i.fas
+{
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 10px;
+}
+
+#app .form-control-range-group
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-items: center;
+}
+
+#app .form-control-range-group .form-control-range-label
+{
+    width: 4rem;
+    margin: 0rem 1rem 0rem 0rem;
+    font-family: monospace;
+    text-align: center;
+}
+
+#app .progress.progress-button
+{
+    width: 16rem;
+    height: 2rem;
+}
+
+#app .progress.progress-button .progress-button-input
+{
+    display: none;
+}
+
+#app .pagination
+{
+    margin: auto 0rem 0rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+
+#app .pagination li.disabled:not(.pagination-arrow)
+{
+    font-weight: bold;
+}

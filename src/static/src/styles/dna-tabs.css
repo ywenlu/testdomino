@@ -1,0 +1,43 @@
+#app #content .article ul.nav.nav-tabs .nav-item
+{
+    color: var(--blue);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    transition: color 0.1s linear;
+}
+
+#app #content .article ul.nav.nav-tabs .nav-item:hover
+{
+    color: var(--grey-darker);
+}
+
+#app #content .article ul.nav.nav-tabs .nav-item .nav-link
+{
+    transition: color 0.2s linear, border 0.2s linear;
+}
+
+#app #content .article ul.nav.nav-tabs .nav-item .nav-link.active
+{
+    font-weight: bold;
+    color: var(--grey-darker);
+}
+
+#app #content .article .nav-content
+{
+    display: none;
+    flex-grow: 1;
+    height: 0px;
+    margin: 0rem 0rem 0rem 0rem;
+    overflow: auto;
+}
+
+#app #content .article .nav-content.active
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}

@@ -1,0 +1,14 @@
+{
+    "website":
+    {
+        "host": "localhost",
+        "port": "8080",
+        "path": "/static",
+        "api": {},
+        "python_scripts":
+        {
+            "main": "main.py",
+            "script_1": "test.py"
+        }
+    }
+}

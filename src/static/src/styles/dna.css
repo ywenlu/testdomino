@@ -1,0 +1,197 @@
+@font-face
+{
+    font-family: "KPMG_Light";
+    src: url("../fonts/KPMG_Light.ttf");
+}
+
+@font-face
+{
+    font-family: "KPMG_Light_Italic";
+    src: url("../fonts/KPMG_Light_Italic.ttf");
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: "KPMG_Extralight";
+    src: url("../fonts/KPMG_Extralight.ttf");
+}
+
+@font-face
+{
+    font-family: "KPMG_Extralight_Italic";
+    src: url("../fonts/KPMG_Extralight_Italic.ttf");
+    font-style: italic;
+}
+
+@font-face
+{
+    font-family: "KPMG_Thin";
+    src: url("../fonts/KPMG_Thin.ttf");
+}
+
+@font-face
+{
+    font-family: "KPMG_Thin_Italic";
+    src: url("../fonts/KPMG_Thin_Italic.ttf");
+    font-style: italic;
+}
+
+:root
+{
+    --transparent: transparent;
+    --primary: #007bff;
+    --shadow: #161a1e;
+    --scrollbar: #272f36;
+    --blur: rgba(255, 255, 255, 0.7);
+
+    --black: #22292f;
+    --grey-black: #343a40;
+    --grey-darkest: #3d4852;
+    --grey-darker: #606f7b;
+    --grey-dark: #8795a1;
+    --grey: #b8c2cc;
+    --grey-light: #dae1e7;
+    --grey-lighter: #f1f5f8;
+    --grey-lightest: #f8fafc;
+    --white: #ffffff;
+
+    --red-darkest: #3b0d0c;
+    --red-darker: #621b18;
+    --red-dark: #cc1f1a;
+    --red: #e3342f;
+    --red-light: #ef5753;
+    --red-lighter: #f9acaa;
+    --red-lightest: #fcebea;
+
+    --orange-darkest: #462a16;
+    --orange-darker: #613b1f;
+    --orange-dark: #de751f;
+    --orange: #f6993f;
+    --orange-light: #faad63;
+    --orange-lighter: #fcd9b6;
+    --orange-lightest: #fff5eb;
+
+    --yellow-darkest: #453411;
+    --yellow-darker: #684f1d;
+    --yellow-dark: #f2d024;
+    --yellow: #ffed4a;
+    --yellow-light: #fff382;
+    --yellow-lighter: #fff9c2;
+    --yellow-lightest: #fcfbeb;
+
+    --green-darkest: #0f2f21;
+    --green-darker: #1a4731;
+    --green-dark: #1f9d55;
+    --green: #38c172;
+    --green-light: #51d88a;
+    --green-lighter: #a2f5bf;
+    --green-lightest: #e3fcec;
+
+    --teal-darkest: #0d3331;
+    --teal-darker: #20504f;
+    --teal-dark: #38a89d;
+    --teal: #4dc0b5;
+    --teal-light: #64d5ca;
+    --teal-lighter: #a0f0ed;
+    --teal-lightest: #e8fffe;
+
+    --blue-darkest: #12283a;
+    --blue-darker: #1c3d5a;
+    --blue-dark: #2779bd;
+    --blue: #3490dc;
+    --blue-light: #6cb2eb;
+    --blue-lighter: #bcdefa;
+    --blue-lightest: #eff8ff;
+
+    --indigo-darkest: #191e38;
+    --indigo-darker: #2f365f;
+    --indigo-dark: #5661b3;
+    --indigo: #6574cd;
+    --indigo-light: #7886d7;
+    --indigo-lighter: #b2b7ff;
+    --indigo-lightest: #e6e8ff;
+
+    --purple-darkest: #21183c;
+    --purple-darker: #382b5f;
+    --purple-dark: #794acf;
+    --purple: #9561e2;
+    --purple-light: #a779e9;
+    --purple-lighter: #d6bbfc;
+    --purple-lightest: #f3ebff;
+
+    --pink-darkest: #451225;
+    --pink-darker: #6f213f;
+    --pink-dark: #eb5286;
+    --pink: #f66d9b;
+    --pink-light: #fa7ea8;
+    --pink-lighter: #ffbbca;
+    --pink-lightest: #ffebef;
+}
+
+html,
+body
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+#root
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-content: stretch;
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+}
+
+td.td-left
+{
+    text-align: left;
+    vertical-align: middle;
+}
+
+td.td-center
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+td.td-right
+{
+    text-align: right;
+    vertical-align: middle;
+}
+
+td.td-left :first-child,
+td.td-center :first-child
+{
+    margin-left: auto;
+}
+
+td.td-right :last-child,
+td.td-center :last-child
+{
+    margin-right: auto;
+}
+
+.btn-text
+{
+    margin-left: 0.6rem;
+}
+
+.btn-icon
+{
+    margin: 0rem 0.4rem 0rem 0.4rem;
+}
+
+.hidden
+{
+    display: none !important;
+}

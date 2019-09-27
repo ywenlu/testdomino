@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Sherlock</title>
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./src/styles/dna.css" />
+    <link rel="stylesheet" href="./src/styles/dna-brand.css" />
+    <link rel="stylesheet" href="./src/styles/dna-header.css" />
+    <link rel="stylesheet" href="./src/styles/dna-tabs.css" />
+    <link rel="stylesheet" href="./src/styles/dna-forms.css" />
+    <link rel="stylesheet" href="./src/styles/dna-panel.css" />
+    <link rel="stylesheet" href="./src/styles/dna-app.css" />
+</head>
+<body>
+    <div id="root">
+        <div id="panel">
+            <div class="brand"><i class="fas fa-user-secret"></i><span class="brand-title">Sherlock project</span></div>
+            <div class="panel-list">
+                <button class="btn btn-success" id="btn-upload"><span><i class="fas fa-upload"></i></span><span class="btn-icon">Upload a file...</span></button>
+                <div class="panel-list-section">
+                    <div class="panel-list-section-header">Uploaded files</div>
+                    <div class="panel-list-section-list" id="article-uploaded"></div>
+                </div>
+            </div>
+        </div>
+        <div id="app">
+            <div id="header">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="navbar-action-list"></div>
+                </nav>
+            </div>
+            <div id="content">
+                <div class="article" id="article-sherlock">
+                    <div class="article-header">
+                        <div class="article-title">Workspace</div>
+                        <div class="article-action"><button class="btn btn-primary"><i class="fas fa-play-circle"></i></span><span class="btn-icon">Start analysis !</span></button></div>
+                    </div>
+                    <hr />
+                    <div class="article-body">
+                        <div class="form-list">
+                            <select class="form-select form-control" id="form-select-file"></select>
+                        </div>
+                        <div class="form-list form-options">
+                            <div class="form-option" id="form-option-icon">
+                                <div class="form-icon"></div>
+                            </div>
+                            <div class="form-option" id="form-option-headers">
+                                <span class="form-option-label">First row is headers</span>
+                                <div class="form-checkbox"></div>
+                            </div>
+                            <div class="form-option" id="form-option-csv-separator">
+                                <span class="form-option-label">Separator</span>
+                                <select class="form-select form-control-compact form-control"></select>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><span class="nav-link" data-tab="view">View</span></li>
+                            <li class="nav-item"><span class="nav-link" data-tab="rules">Set rules (single-file)</span></li>
+                            <li class="nav-item"><span class="nav-link" data-tab="result">Result</span></li>
+                        </ul>
+                        <div class="nav-content" data-tab="view">
+                            <div class="form-table"><table class="table" id="view-table"></table></div>
+                            <ul class="pagination justify-content-center" id="view-pagination"></ul>
+                        </div>
+                        <div class="nav-content" data-tab="rules">
+                            <div class="form-table"><table class="table" id="rules-table"></table></div>
+                            <ul class="pagination justify-content-center" id="rules-pagination"></ul>
+                        </div>
+                        <div class="nav-content" data-tab="result">
+                            <div class="form-table"><table class="table" id="result-table"></table></div>
+                            <ul class="pagination justify-content-center" id="result-pagination"></ul>
+                        </div>
+                    </div>
+                    <div class="article-popup">
+                        <div class="article-popup-container">
+                            <div class="article-header">
+                                <div class="article-title">Add a reference list</div>
+                                <div class="article-close"><i class="fas fa-times"></i></div>
+                            </div>
+                            <hr />                            
+                            <div class="article-popup-info">
+                                <textarea class="form-control form-textarea form-textarea-large"></textarea>
+                            </div>
+                            <div class="article-popup-controls">
+                                <button class="btn btn-success btn-validate">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/jquery/jquery.bind-first.min.js"></script>
+    <script src="./lib/popper/popper.min.js"></script>
+    <script src="./lib/bootstrap/bootstrap.min.js"></script>
+    <script src="./lib/moment/moment.min.js"></script>
+    <script src="./lib/axios/axios.min.js"></script>
+    <script src="./src/scripts/dna-utils.js"></script>
+    <script src="./src/scripts/dna-tabs.js"></script>
+    <script src="./src/scripts/dna-forms.js"></script>
+    <script src="./src/scripts/dna-pagination.js"></script>
+    <script src="./src/scripts/dna-navigate.js"></script>
+    <script src="./src/scripts/dna-progress.js"></script>
+    <script src="./src/scripts/dna-csv.js"></script>
+    <script src="./src/scripts/dna-upload.js"></script>
+    <script src="./src/scripts/dna-article.js"></script>
+    <script src="./src/scripts/dna-article-uploaded.js"></script>
+    <script src="./src/scripts/dna-article-sherlock.js"></script>
+    <script src="./src/scripts/store.js"></script>
+    <script src="./src/scripts/sherlock.js"></script>
+</body>
+</html>

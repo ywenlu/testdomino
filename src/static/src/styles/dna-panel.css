@@ -1,0 +1,284 @@
+/************************/
+/* PANEL ROOT CONTAINER */
+/************************/
+
+#panel
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-width: 20rem;
+    height: 100vh;
+    background-color: var(--grey-black);
+    box-shadow: 0.8rem 0px 0.8rem -0.8rem var(--shadow);
+    z-index: 1;
+}
+
+/**************/
+/* PANEL LIST */
+/**************/
+
+#panel .panel-list
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+    padding: 1rem 1rem 1rem 1rem;
+    color: var(--grey);
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--black) var(--grey-black);
+}
+
+/**********************/
+/* PANEL LIST SECTION */
+/**********************/
+
+#panel .panel-list .panel-list-section
+{
+    margin: 0rem 0rem 0rem 0rem;
+}
+
+#panel .panel-list .panel-list-section::after
+{
+    content: "";
+    display: block;
+    min-height: 1rem;
+}
+
+/*****************************/
+/* PANEL LIST SECTION HEADER */
+/*****************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-header
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    background-color: var(--black);
+    border-radius: 2rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--grey-dark);
+    text-transform: uppercase;
+}
+
+/******************************/
+/* PANEL LIST SECTION ELEMENT */
+/******************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-element
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    box-sizing: border-box;
+    border-radius: 18px;
+    transition: background-color 0.05s linear, color 0.05s linear;
+    cursor: pointer;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-element:hover
+{
+    background-color: var(--black);
+    color: var(--grey-light);
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-element i
+{
+    width: 1rem;
+    text-align: right;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-element .panel-list-section-element-text
+{
+    max-width: 10rem;
+    height: 100%;
+    margin-left: 1rem;
+    white-space: pre;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1;
+}
+
+/*****************************/
+/* PANEL LIST SECTION BUTTON */
+/*****************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-button
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    transition: background-color 0.05s linear, color 0.05s linear;
+    cursor: pointer;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-button:hover
+{
+    background-color: var(--black);
+    color: var(--grey-light);
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-button.panel-list-section-button-danger:hover
+{
+    background-color: var(--red-dark);
+}
+
+/*******************************/
+/* PANEL LIST SECTION PROGRESS */
+/*******************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-progress
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    border-radius: 2.5rem;
+    transition: background-color 0.1s linear, color 0.1s linear;
+    cursor: pointer;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage:hover
+{   
+    background-color: var(--black);
+    color: var(--grey-light);
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage .panel-list-progress-stage-index
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0.1rem 0rem;
+    background-color: var(--grey);
+    color: var(--grey-black);
+    border-radius: 50%;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage .panel-list-progress-stage-name
+{
+    margin: 0.4rem 0rem 0rem 0rem;
+    line-height: 1;
+}
+
+/*****************************************/
+/* PANEL LIST SECTION PROGRESS WHEN DONE */
+/*****************************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage.done
+{
+    background-color: var(--green-dark);
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage.done:hover
+{
+    background-color: var(--green);
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage.done .panel-list-progress-stage-index
+{
+    background-color: var(--grey-light);
+    color: var(--black);
+    font-weight: bold;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage.done .panel-list-progress-stage-name
+{
+    color: var(--grey-light);
+    font-weight: bold;
+}
+
+/*****************************************/
+/* PANEL LIST SECTION PROGRESS SEPARATOR */
+/*****************************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-separator
+{
+    width: 0.15rem;
+    height: 2rem;
+    background-color: var(--grey-light);
+    border-radius: 0.1rem 0.1rem 0.1rem 0.1rem;
+}
+
+/*
+#panel .panel-list .panel-list-section .panel-list-section-progress .panel-list-progress-stage:not(:last-child)::after
+{
+    content: "";
+    display: block;
+    width: 0.1rem;
+    height: 6rem;
+    margin: 0.4rem 0rem 0.4rem 0rem;
+    background-color: var(--grey-light);
+    border: 0.1rem solid var(--grey-light);
+    border-radius: 0.1rem;
+}
+*/
+
+#panel .panel-list .panel-list-section.panel-list-section-centered .panel-list-section-element
+{
+    justify-content: center;
+}
+
+/****************************/
+/* PANEL LIST SECTION GROUP */
+/****************************/
+
+#panel .panel-list .panel-list-section .panel-list-section-group
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+}
+
+
+#panel .panel-list .panel-list-section .panel-list-section-group :not(:first-child)
+{
+    margin-left: 0.4rem;
+}
+
+#panel .panel-list .panel-list-section .panel-list-section-group .panel-list-section-element
+{
+    flex-grow: 1;
+}
+
+/********************************/
+/* PANEL LIST BTN COMPATIBILITY */
+/********************************/
+
+#panel .panel-list .btn
+{
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+}

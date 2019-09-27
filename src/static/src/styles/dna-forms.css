@@ -1,0 +1,165 @@
+.btn.btn-compact,
+.form-control.form-control-compact
+{
+    height: 1.6rem !important;
+    padding: 0.1rem 0.4rem 0.2rem 0.4rem;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.form-container
+{
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.form-control
+{
+    transition: background-color 0.2s;
+}
+
+.form-icon
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-icon i
+{
+    font-size: 2rem;
+}
+
+.form-icon .form-icon-label
+{
+    padding: 0rem 0rem 0rem 0.4rem;
+    font-style: italic;
+    color: var(--grey-darker);
+}
+
+.form-list
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.form-list .list-group
+{
+    width: 100%;
+}
+
+.form-options
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 1.5rem;
+    box-sizing: content-box;
+}
+
+.form-option
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-option:not(:first-child)
+{
+    margin: 0rem 0rem 0rem 1.4rem;
+}
+
+.form-checkbox
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--blue-dark);
+    border-radius: 0.25rem;
+    box-sizing: content-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s;
+    opacity: 0.5;
+}
+
+.form-checkbox::after
+{
+    content: "\2713";
+    color: var(--blue-lightest);
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+.form-checkbox:hover
+{
+    opacity: 1;
+}
+
+.form-checkbox.active
+{
+    background-color: var(--primary);
+    border-color: var(--primary);
+    opacity: 1;
+}
+
+.form-checkbox.active::after
+{
+    opacity: 1;
+}
+
+.form-option .form-option-label
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: self-end;
+    height: 1rem;
+    padding: 0rem 0.4rem 0rem 0rem;
+    font-weight: bold;
+    color: var(--grey-darker);
+}
+
+.form-table
+{
+    border-right: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    overflow: auto;
+}
+
+.form-table tr th
+{
+    border-top: 0px solid;
+    text-align: center;
+}
+
+.form-table tr td button.btn
+{
+    width: 100%;
+}
+
+.form-select
+{
+    max-height: 100%;
+}
+
+.form-textarea
+{
+    resize: none;
+}
+
+.form-textarea-large
+{
+    min-height: 20rem;
+}
